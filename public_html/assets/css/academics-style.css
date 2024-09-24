@@ -1,0 +1,410 @@
+:root {
+    --font-family-sans-serif: "Open Sans", sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    /* colors */
+    --blue-light: rgb(50, 61, 214);
+    --blur-dark: rgb(1, 5, 66);
+    --white1: #FCFCFF;
+    --white2: #E1E2F6;
+    --white3: #F5F5FA;
+    --blue-normal: #1722BE;
+    --white4: #CCCFF3;
+    --white5: #FAFAFA;
+    --white6: #F4F4F5;
+    --white7: #E4E4E7;
+    --white8: #D4D4D8;
+    --light-white: #A1A1AA;
+    --light-dark: #71717A;
+    --light-dark1: #52525B;
+    --light-dark2: #3F3F46;
+    --light-dark3: #27272A;
+    --light-dark4: #18181B;
+    --dark-color: rgb(9, 9, 11);
+    --light-white: #FFFFFF;
+    --light-indigo: #3498db
+  }
+  
+/* General page styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /*background-color: #f9f9f9;*/
+    background-color: var(--white5);
+    color: #333;
+    line-height: 1.7;
+}
+
+/* Headings */
+h1{
+	color: #fff;
+}
+
+h2, h3, h4 {
+    color: #333;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+h2{
+    font-size: 1.6rem;
+}
+h2, h3 {
+    margin-bottom: 15px;
+}
+
+/* Container styling for sections */
+.container {
+    max-width: 85%;
+	margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 5px solid #4a90e2;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Section Styling */
+section {
+    margin: 20px 0;
+    /*background-color: #fff;*/
+    padding: 25px;
+    /*border-radius: 10px;*/
+    /*box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);*/
+}
+
+
+/* Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    background-color: #F5F5F5;
+    padding: 20px;
+    border-left: 5px solid #4A90E2;
+    border-radius: 8px;
+}
+
+.timeline-item h3 {
+    color: #333333;
+    font-size: 1.2rem;
+}
+
+.timeline-item .p{
+	color: #555;
+}
+
+.timeline-item .date {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+/* Research & Projects Styling */
+/*#research-projects {
+    margin-bottom: 40px;
+}*/
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    flex: 1;
+    min-width: 300px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    /*background-color: #fff;*/
+	background-color: #f8f9fa;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.project:hover {
+    /*box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);*/
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #007bff;
+    margin-top: 0;
+}
+
+.project p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.project a.read-more-link {
+    display: inline-block;
+    /*margin-top: 10px;*/
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.project a.read-more-link:hover {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+}
+
+/* Project Details Page */
+#project-details {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#project-details h2 {
+    font-size: 1.7rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#project-details p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#project-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#project-details ul li {
+    margin-bottom: 10px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+#volunteer{
+	border-bottom: 1.5px solid #dee2e6;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    padding: 12px 25px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+
+.footer {
+	text-align: center;
+	margin: 0;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+    }
+
+    .project {
+        flex-direction: column;
+        min-width: auto;
+        /*min-width: 100%;*/
+    }
+
+    #project-details {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.5;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    .timeline-item h3 {
+        font-size: 1.2rem;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/* Subtle animations for interactive elements */
+.project a.read-more-link {
+    position: relative;
+}
+/*
+.project a.read-more-link::after {
+    content: '→';
+    position: absolute;
+    right: -15px;
+    transition: right 0.3s ease;
+}
+
+.project a.read-more-link:hover::after {
+    right: -5px;
+}
+*/
+
+
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Academic Journey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>My Academic Journey</h1>
+        <p>A Path Toward Mastery in [Field/Subject]</p>
+    </header>
+
+    <!-- Educational Timeline -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Master of Science, XYZ University</h3>
+                <span class="date">2019-2021</span>
+                <p>Graduated with honors, specialized in Artificial Intelligence and Data Science.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Bachelor of Engineering, ABC College</h3>
+                <span class="date">2015-2019</span>
+                <p>Graduated in Computer Science with a focus on software engineering principles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research & Projects -->
+    <section id="projects">
+        <h2>Research & Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>AI-Powered Chatbot</h3>
+                <p>Developed an AI chatbot for customer service automation that improved response time by 30%.</p>
+            </div>
+            <div class="project-card">
+                <h3>Data Mining for Healthcare</h3>
+                <p>Research focused on using data mining techniques to predict patient health outcomes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Certifications -->
+    <section id="skills">
+        <h2>Skills & Certifications</h2>
+        <div class="skills">
+            <div class="skill">
+                <h4>Python</h4>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <h4>Machine Learning</h4>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Honors & Awards -->
+    <section id="awards">
+        <h2>Honors & Awards</h2>
+        <div class="awards-list">
+            <div class="award-item">
+                <h4>Dean's List Award</h4>
+                <span class="date">2020</span>
+                <p>Awarded for academic excellence in the Master's program.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Work -->
+    <section id="volunteer">
+        <h2>Volunteer Work</h2>
+        <div class="volunteer-grid">
+            <div class="volunteer-item">
+                <h3>Habitat for Humanity</h3>
+                <p>Volunteered in building homes for underprivileged families.</p>
+            </div>
+            <div class="volunteer-item">
+                <h3>Local Food Bank</h3>
+                <p>Helped organize food drives and distributions for low-income communities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 John Doe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+*/
