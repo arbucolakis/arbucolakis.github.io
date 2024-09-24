@@ -12366,10 +12366,11 @@ p {
   font-size: 0.9rem;
   font-weight: 500;
   color: #ffffff;
-  background-color: var(--blue-light);
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
   text-transform: uppercase;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
 .project-sec-description {
