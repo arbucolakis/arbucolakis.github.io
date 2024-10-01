@@ -1,17 +1,22 @@
 // smooth scroll
 $(document).ready(function(){
-    $(".navbar .nav-link .link").on('click', function(event) {
-        var sectionId = $(this).data('section');
-        if (sectionId) {
+    $(".navbar .nav-link").on('click', function(event) {
+        if (this.hash !== "") {
             event.preventDefault();
-            var $targetSection = $('#' + sectionId);
-            
-            if ($targetSection.length) {
-                $('html, body').animate({
-                    scrollTop: $targetSection.offset().top
-                }, 700);
-            }
-        }
+
+            var hash = this.hash;
+
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top - 40  // 40 is the data-offset value
+            }, 700, function(){
+                // Add hash to URL without jumping to it
+                if(history.pushState) {
+                    history.pushState(null, null, hash);
+                } else {
+                    location.hash = hash;
+                }
+            });
+        } 
     });
 });
 
