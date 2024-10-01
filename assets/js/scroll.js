@@ -1,6 +1,6 @@
 // smooth scroll
 $(document).ready(function(){
-    $(".navbar .nav-link").on('click', function(event) {
+    $(".navbar .nav-link .link").on('click', function(event) {
         var sectionId = $(this).data('section');
         if (sectionId) {
             event.preventDefault();
