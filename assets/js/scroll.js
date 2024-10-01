@@ -1,6 +1,6 @@
 // smooth scroll
 $(document).ready(function () {
-    $(".navbar .nav-link").on('click', function (event) {
+    $(".nav-link").on('click', function (event) {
         event.preventDefault();  // Prevent default link behavior
 
         var targetSection = $(this).attr('href').replace('/', '');  // Get the section name (e.g. 'home')
