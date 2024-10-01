@@ -1,19 +1,17 @@
 // smooth scroll
 $(document).ready(function(){
     $(".navbar .nav-link").on('click', function(event) {
-
-        if (this.hash !== "") {
-
+        var sectionId = $(this).data('section');
+        if (sectionId) {
             event.preventDefault();
-
-            var hash = this.hash;
-
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 700, function(){
-                window.location.hash = hash;
-            });
-        } 
+            var $targetSection = $('#' + sectionId);
+            
+            if ($targetSection.length) {
+                $('html, body').animate({
+                    scrollTop: $targetSection.offset().top
+                }, 700);
+            }
+        }
     });
 });
 
