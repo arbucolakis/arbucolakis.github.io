@@ -1,21 +1,17 @@
 // smooth scroll
-$(document).ready(function(){
-    $(".navbar .nav-link").on('click', function(event) {
+$(document).ready(function () {
+    $(".navbar .nav-link").on('click', function (event) {
+        event.preventDefault();  // Prevent default link behavior
 
-        if (this.hash !== "") {
+        var targetSection = $(this).attr('href').replace('/', '');  // Get the section name (e.g. 'home')
 
-            event.preventDefault();
+        // Smoothly scroll to the section with the matching ID
+        $('html, body').animate({
+            scrollTop: $('#' + targetSection).offset().top
+        }, 700);
 
-            var hash = this.hash;
-
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 700, function(){
-                //window.location.hash = hash;
-                // Instead of updating window.location.hash, use history.pushState
-                window.history.pushState(null, null, '/' + hash.substring(1)); // Update the URL to /section
-            });
-        } 
+        // Update the URL without the hash
+        window.history.pushState(null, null, '/' + targetSection);
     });
 });
 
