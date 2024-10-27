@@ -12030,7 +12030,7 @@ p {
 }
 .about-img-holder .about-img {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  /* height: 600px;  */
   object-fit: cover; /* Ensures the image covers the space without stretching */
 }
 
@@ -12091,6 +12091,8 @@ p {
   font-family: "Open Sans" sans-serif;
   color: var(--light-dark3);
   font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
 /* Styling for Personal Details */
@@ -12185,7 +12187,12 @@ p {
     margin: auto;
     margin-bottom: 20px;
   }
+  .about-img-holder .about-img {
+    /* border-radius: 50%; */
+    width: 300px;
+    height: 300px;
 
+  }
   .about-caption {
     text-align: center;
   }

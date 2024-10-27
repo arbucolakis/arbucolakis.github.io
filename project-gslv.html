@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimation of Buffet Forcing Function for Launch Vehicle</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Baloo+Paaji|Open+Sans:300,300i,400,400i,600,600i,700,700i");
+:root {
+    --bg-white: #F5F7FA;
+    --warm-white: #FAFAF8;
+	--white5: #FAFAFA;
+    --bg-light-gray: #F0F2F5;
+    --bg-pale-blue: #E6F3FF;
+    --bg-off-white: #F9F9F9;
+
+    --light-indigo: #3498db;
+    --light-dark: #71717A;
+    --light-dark1: #52525B;
+    --light-dark2: #3F3F46;
+    --light-dark3: #27272A;
+    --light-dark4: #18181B;
+    --dark-color: rgb(9, 9, 11);
+    --blue-light: rgb(50, 61, 214);
+    --blur-dark: rgb(1, 5, 66);
+    --blue-normal: #1722BE;
+    --blue: #1e549f;
+    --indigo: #695aa6;
+    --orange: #ff6d02;
+    --orange-dark: #a94702;
+    --orange-light: #ff6b02dc;
+    --yellow: #ffc107;
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-white);
+            color: #1a1a1a;
+            line-height: 1.7;
+        }
+
+        nav {
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            background-color: var(--warm-white);
+        }
+
+        .back-button {
+            text-decoration: none;
+            color: var(--blue-light);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-header {
+            margin-bottom: 2rem;
+        }
+
+        .project-type {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        .project-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--blue-normal);
+        }
+
+        .project-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem;
+            background-color: #fafafa;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .meta-label {
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        .meta-value {
+            font-weight: 600;
+        }
+
+        .meta-value .vssc-link{
+            color: var(--blue-light)
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--light-dark2);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e5e5;
+        }
+
+        .links-section {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(to right, #1722BE, rgb(50, 61, 214));
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            background-color: #333;
+        }
+
+        @media (max-width: 640px) {
+            .project-title {
+                font-size: 1.75rem;
+            }
+
+            .project-meta {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/" class="back-button">← Back to Projects</a>
+    </nav>
+
+    <div class="container">
+        <header class="project-header">
+            <div class="project-type">Internship Project</div>
+            <h1 class="project-title">Estimation of Buffet Forcing Function for Launch Vehicle</h1>
+
+            <div class="project-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Timeline</span>
+                    <span class="meta-value">May 2019 - Aug 2019</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Organization</span>
+                    <span class="meta-value"><a href="https://www.isro.gov.in/VSSC.html" class="vssc-link">Vikram Sarabhai Space Centre</a> (VSSC, ISRO)</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Role</span>
+                    <span class="meta-value">Research Intern</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Field</span>
+                    <span class="meta-value">Aerospace Engineering / Fluid Dynamics</span>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            <h2 class="section-title">Introduction & Overview</h2>
+            <p>This project focused on understanding how buffet forces, arising from turbulent flows during transonic flight, affect a launch vehicle’s structural dynamics. Buffeting, caused by unsteady pressure fluctuations from shock oscillations and flow separations, poses significant risks to vehicle integrity by resonating with natural structural frequencies.</p>
+
+            <p>The task was to estimate the buffet forcing function by analyzing unsteady pressure measurements gathered from wind tunnel tests. These tests involved a model of the launch vehicle exposed to varying Mach numbers (0.95 and 1.02) and angles of attack (α = -4° to +4°). The challenge was to compute the unsteady forces from these pressure distributions along the surface, enabling better predictions of potential structural damage during actual flight.</p>
+
+            <p><strong>Fourier series-based integration</strong> method was employed to process the azimuthal pressure data, given its periodic nature. This enabled accurate force calculations along the longitudinal axis of the vehicle, compared with traditional numerical methods like the <strong>trapezoidal and Simpson’s rule</strong>. A frequency-domain analysis using <strong> Spectral Density (PSD)</strong> further revealed how different frequencies contributed to the sectional force along the vehicle length.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Challenges & Solutions</h2>
+            <p>The project encountered several challenges, primarily due to the complexity of transonic flows and the accuracy needed in pressure measurements. One key issue was ensuring precision in the Fourier approximation , as small discrepancies in azimuthal spacing could lead to large errors. This was addressed by carefully selecting the number of Fourier terms based on the resolution of available data points.</p>
+
+            <p>Another challenge was understanding how the buffet forces varied longitudinally along the vehicle. It was observed that the root-mean-square (rms) value of the sectional force increased up to a certain critical point along the axis, after which it began to decline. Interestingly, this critical point shifted with the Mach number—x/h = 3.7 at Mach 0.95 and x/h = 4.3 at Mach 1.02—indicating the importance of capturing flow behavior across different flight conditions.</p>
+
+            <p>The PSD analysis revealed that higher frequencies began contributing more prominently to the forces at Mach 1.02, highlighting the need for robust structural designs to withstand such conditions. By validating the Fourier approach with traditional methods, the project ensured that the computed forces were reliable for practical use.</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Outcomes & Impact</h2>
+            <p>This project provided valuable insights into the dynamic behavior of launch vehicles under transonic flight conditions. The analysis showed that the buffet force content within the critical 1–5 Hz frequency range contributed to less than a third of the total force, suggesting that designs should focus on mitigating vibrations at these frequencies.</p>
+
+            <p>The outcomes from this work will guide future structural designs by helping engineers predict buffeting more accurately. These findings also emphasized the importance of high-resolution pressure data for reliable force estimates. The techniques and insights developed during this project contribute to safer and more efficient launch vehicle designs, ultimately <strong>enhancing flight performance and safety</strong>.</p>
+        </section>
+    </div>
+</body>
+</html>
